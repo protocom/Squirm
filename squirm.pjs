@@ -1,0 +1,32 @@
+void setup()
+{
+  size(1020,520);
+  background(238);
+  noStroke();
+  smooth();
+}
+
+void draw()
+{
+ x = mouseX;
+ y = mouseY;
+ 
+ if(x > width-11) { x = x-10; }
+ if(x < 11) { x = x+10; }
+ 
+ if(y > height-11) { y = y-10; }
+ if(y < 11) { y = y+10; }
+ 
+ fill(random(255),random(255),random(255));
+ ellipse(x,y,20,20);
+}
+
+void mousePressed()
+{
+  background(238);
+}
+
+void keyPressed()
+{
+  save_img();
+}
